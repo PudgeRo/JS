@@ -32,7 +32,98 @@ Infinity делать не нужно, однако, в случае если б
 <script>
   "use strict";
 
+<<<<<<< HEAD
   // Здесь пишем решение, данный комментарий необходимо стереть.
+=======
+  /**
+   * Return the sum of two numbers
+   * 
+   * @param {number} firstNumber: the first number
+   * @param {number} secondNumber: the second number
+   * @return {number}: sum of two number
+  */
+  function sum(firstNumber, secondNumber) {
+    return firstNumber + secondNumber;
+  }
+
+  /**
+   * Return the difference between two numbers
+   * 
+   * @param {number} firstNumber: the first number
+   * @param {number} secondNumber: the second number
+   * @return {number}: difference between the largest and smallest number
+  */
+  function difference(firstNumber, secondNumber) {
+    // find the largest number of the entered
+    if (firstNumber > secondNumber) {
+      return firstNumber - secondNumber;
+    } else if (firstNumber < secondNumber) {
+      return secondNumber - firstNumber;
+    } else if (firstNumber === secondNumber) {
+      return 0;
+    }
+  }
+
+  /**
+   * Return the multiplication of two numbers
+   * 
+   * @param {number} firstNumber: the first number
+   * @param {number} secondNumber: the second number
+   * @return {number}: the multiplication of two number
+  */
+  function mulriplication(firstNumber, secondNumber) {
+    return firstNumber * secondNumber;
+  }
+
+  /**
+   * Return the division of two numbers
+   * 
+   * @param {number} firstNumber: the first number
+   * @param {number} secondNumber: the second number
+   * @return {number}: the division of two number
+  */
+  function division(firstNumber, secondNumber) {
+    // check the devisor by zero
+    if (secondNumber !== 0) {
+      return firstNumber / secondNumber;
+    } else {
+      return 'Division by zero'
+    }
+  }
+
+  /**
+   * Return value of math operation, if math operation is incorrect than return NaN
+   * 
+   * @param {number} arg1: the first number
+   * @param {number} arg2: the second number
+   * @param {string} operation: sign of math operation
+   * @return {number or Nan}: the value of math operation or NaN for incorrect data
+  */
+  function mathOperation(arg1, arg2, operation) {
+    // check correct math operation
+    if (operation === '+' || operation === '-' || operation === '*' || operation === '/') {
+      // check sign of math operation
+      if (operation === '+') {
+        return sum(arg1, arg2);
+      } else if (operation === '-') {
+        return difference(arg1, arg2);
+      } else if (operation === '*') {
+        return mulriplication(arg1, arg2);
+      } else if (operation === '/') {
+        return division(arg1, arg2);
+      }
+    } else {
+      return NaN
+    }
+  }
+
+  // check results 
+  console.log(mathOperation(1, 2, '*'))
+  console.log(mathOperation(1, 0, '/'))
+  console.log(mathOperation(1, 2, '+'))
+  console.log(mathOperation(1, 5, '-'))
+  console.log(mathOperation(1, 2, ':'))
+>>>>>>> me
 </script>
 </body>
 </html>

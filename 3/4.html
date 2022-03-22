@@ -43,8 +43,42 @@
       price: 78,
     },
   ];
+<<<<<<< HEAD
 
   // Здесь пишем решение, данный комментарий необходимо стереть.
+=======
+  
+
+  // task one
+  const moreThenOnePhoto = products.filter(function(item) {
+    if ('photos' in item) {
+      if (item.photos.length >= 1) {
+        return item
+      }
+    }
+  });
+  console.log(moreThenOnePhoto);
+
+  // task two
+  let prices = [];
+  for (let i = 0; i < products.length; i++) {
+    prices.push(products[i].price)
+  }
+
+  prices.sort(function(a, b) {
+    return a - b
+  });
+  
+  let sortProducts = [];
+  for (let i1 = 0; i1 < prices.length; i1++) {
+    for (let i2 = 0; i2 < products.length; i2++) {
+      if (products[i2].price === prices[i1]) {
+        sortProducts.push(products[i2])
+      }
+    }
+  }
+  console.log(sortProducts);
+>>>>>>> me
 </script>
 </body>
 </html>
