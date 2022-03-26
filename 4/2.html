@@ -60,7 +60,7 @@
   PostES5.prototype.edit = function (text) {
     this.text = text;
     this.date = new Date();
-  }
+  };
 
   function AttachedPostES5 (authorName, text) {
     PostES5.call(this, authorName, text);
@@ -71,20 +71,9 @@
   AttachedPostES5.prototype.constructor = AttachedPostES5;
 
   AttachedPostES5.prototype.makeTextHighlighted = function () {
-    /** не знаю почему, но эта функция у меня согласно моей задумке не работала, не смотря на знаки сравнения (== или ===)
-    if (this.highlighted === false) {
-      this.highlighted = true;
-    } else {
-      this.highlighted = false;
-    };
-    */
-    if (this.highlighted !== true) {
-      this.highlighted = true;
-    } else {
-      this.highlighted = false;
-    };
+    this.highlighted = !this.highlighted;
     this.date = new Date();
-  }
+  };
 
   // ES6
   // class PostES6 {
@@ -101,17 +90,14 @@
   // }
 
   // class AttachedPostES6 extends PostES6 {
+  //   highlighted = false;
+  //
   //   constructor(authorName, text) {
   //     super(authorName, text);
-  //     this.highlighted = false;
   //   }
 
   //   makeTextHighlighted() {
-  //     if (this.highlighted !== true) {
-  //       this.highlighted = true;
-  //     } else {
-  //       this.highlighted = false;
-  //     };
+  //     this.highlighted = !this.highlighted;
   //     this.date = new Date();
   //   }
   // }
