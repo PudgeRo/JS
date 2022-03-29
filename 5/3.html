@@ -79,10 +79,12 @@
   Необходимо использовать делегирование.
   */
   document.addEventListener('click', event => {
-    if (event.target.classList.contains('super_element') === true){
-      console.log(`Класс "super_element" присутствует в элементе "${event.target.tagName.toLowerCase()}".`);
+    if (event.target.classList.contains('super_element')){
+      console.log(`Класс "super_element" присутствует в элементе "${event.target.
+      tagName.toLowerCase()}".`);
     } else {
-      console.log(`Класс "super_element" отсутствует в элементе "${event.target.tagName.toLowerCase()}".`);
+      console.log(`Класс "super_element" отсутствует в элементе "${event.target.
+      tagName.toLowerCase()}".`);
     }
   });
 
@@ -106,8 +108,8 @@
   const ulEl = document.querySelector('ul');
   ulEl.addEventListener('click', event => {
     if (event.target.tagName !== "BUTTON") {
-      return;
-    };
+      return
+    }
     console.log(event.target.textContent);
   })
   
