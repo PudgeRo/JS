@@ -65,7 +65,7 @@
   должно моментально отображаться в span. То есть при печати в input'е тег span
   также должен меняться.
   */
-  const inputElById = document.getElementById('from');
+  const inputElById = document.querySelector('span');
   inputElById.addEventListener('input', event => {
     const spanEl = document.querySelector('span');
     spanEl.textContent = event.target.value;
@@ -82,7 +82,7 @@
   document.querySelector('button.messageBtn').addEventListener('click', () => {
     messageEl.classList.add('animate_animated', 'animate_fadeInLestBig');
     messageEl.style.visibility = 'visible';
-  })
+  });
 
 
   /*
@@ -108,10 +108,6 @@
   });
 
   formEl.addEventListener('input', event => {
-    // опять этот if из 3 задачи 1 файла))
-    // if (!event.target.classList.contains('form-control')) {
-    //   return;
-    // }
     if (event.target.value === '') {
       event.target.classList.add('error');
     }else {

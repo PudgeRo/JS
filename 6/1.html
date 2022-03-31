@@ -44,16 +44,16 @@
    */
   const productNameEls = document.querySelectorAll('.productName');
   productNameEls.forEach(function(productName) {
-    productName.style.fontSize = '24px'
+    productName.style.fontSize = '24px';
   });
 
 
   /*
   2. Установите всем элементам с классом "product" внешний отступ справа 50px.
    */
-  const productEls = document.querySelectorAll('.productName');
+  const productEls = document.querySelectorAll('.product');
   productEls.forEach(function(product) {
-    product.style.marginRight = '50px'
+    product.style.marginRight = '50px';
   });
 
 
@@ -99,8 +99,6 @@
   5. По истечению 2 секунд с момента открытия страницы первый товар должен быть
   удален из html.
    */
-  // Посмотрел, что у вас такое же решение. Это нормально
-  // что результата не видно?
   setTimeout(() => document.querySelector('.product').remove(), 2000);
 
 </script>
