@@ -24,7 +24,6 @@
    * @returns {number} - Набольшее число из набора цифр числа, переданного в
    * параметр "n"
    */
-  // Мне кажется, мое решение слишком ресурсо-затратное
   function descendingOrder(n) {
     let a = 0;
     let array = [];
@@ -33,9 +32,9 @@
       array.push(a);
       n = Math.floor(n / 10);
     }
-    array.sort()
+    array.sort();
     let k = 0;
-    let c = 1
+    let c = 1;
     for (let i = 0; i < array.length; i++) {
       k += array[i] * c;
       c *= 10;
